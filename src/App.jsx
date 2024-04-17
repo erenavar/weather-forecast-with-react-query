@@ -1,12 +1,14 @@
-import { useData } from "./assets/api/WeatherApi";
+import "./App.css";
+//import { useData } from "./assets/api/WeatherApi";
 
 function App() {
-  const { data: forecasts } = useData("utrecht");
-  console.log(forecasts.data.weather[0].description);
+  // const { data: forecasts } = useData("utrecht");
 
   return (
     <>
-      <p>Weather Forecast</p>
+      <button type="button" className="btn btn-primary">
+        Primary
+      </button>
     </>
   );
 }
