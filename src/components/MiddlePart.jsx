@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "./MiddlePart.css";
 
 const MiddlePart = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="middlePart">
       <div className="container">
@@ -13,7 +15,15 @@ const MiddlePart = () => {
 
         <br />
 
-        <button style={{ width: "10%" }}>+ Add</button>
+        <button
+          className="btn btn-light"
+          onClick={() => {
+            setShowModal(!showModal);
+          }}
+          style={{ width: "10%" }}
+        >
+          + Add
+        </button>
       </div>
     </div>
   );
