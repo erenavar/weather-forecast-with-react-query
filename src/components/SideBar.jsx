@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { DataContext } from "../App";
-import "./MiddlePart.css";
+import "./SideBar.css";
 
 const SideBar = () => {
   const [showModal, setShowModal] = useContext(DataContext);
@@ -9,20 +9,16 @@ const SideBar = () => {
       className={showModal ? "modal-dialog show" : "modal-dialog"}
       role="document"
     >
-      <div className="modal-content">
-        <div className="modal-header">
+      <div className="sideBar">
+        <div className="sideBarHeader">
+          <h5>Add City</h5>
           <button
+            className="btn btn-light"
             type="button"
-            className="close"
-            data-dismiss="modal"
-            aria-label="Close"
-            onClick={() => {}}
+            style={{ width: "8%" }}
           >
-            <span aria-hidden="true">X</span>
+            x
           </button>
-          <h4 className="modal-title" id="myModalLabel">
-            Right Sidebar
-          </h4>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ function App() {
 
   return (
     <DataContext.Provider value={[showModal, setShowModal]}>
-      <div style={{ opacity: showModal ? 0.9 : 1 }}>
+      <div style={{ opacity: showModal ? 0.7 : 1 }}>
         <Header />
         <MiddlePart />
       </div>
