@@ -10,13 +10,16 @@ import { useState } from "react";
 export const DataContext = createContext();
 
 function App() {
-  const [show, setShow] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   // const { data: forecasts } = useData("utrecht");
 
   return (
-    <DataContext.Provider value={[show, setShow]}>
-      <Header />
-      <MiddlePart />
+    <DataContext.Provider value={[showModal, setShowModal]}>
+      <div style={{ opacity: showModal ? 0.9 : 1 }}>
+        <Header />
+        <MiddlePart />
+      </div>
+
       <SideBar />
     </DataContext.Provider>
   );

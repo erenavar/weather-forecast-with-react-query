@@ -1,11 +1,10 @@
-import { useState } from "react";
 import "./MiddlePart.css";
 import { useContext } from "react";
 import { DataContext } from "../App";
 
 const MiddlePart = () => {
-  const [show, setShow] = useContext(DataContext);
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useContext(DataContext);
+
   return (
     <div className="middlePart">
       <div className="container justify-content-center">
@@ -21,8 +20,7 @@ const MiddlePart = () => {
         <button
           className="btn btn-light"
           onClick={() => {
-            alert(show);
-            setShow(!show);
+            setShowModal(!showModal);
           }}
           style={{ width: "10%" }}
         >
